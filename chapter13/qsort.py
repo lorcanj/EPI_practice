@@ -7,7 +7,10 @@ def sort(A, lo, hi):
 
 def sort_in_array(A, lo, hi):
 
-    # we are choosing the pivot
+    # we are choosing the pivot as the element on the right-hand side
+    # which can cause problems if the elements on the right are generally
+    # greater than the elements on the left as it means that the pivot will be poor
+    # and the time complexity degrades to O(n^2)
     i = lo
     j = hi - 1
     pivot = A[hi]
